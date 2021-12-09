@@ -1,0 +1,36 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Codepen from "../components/social-links/Codepen.astro";
+import Github from "../components/social-links/Github.astro";
+import LinkedIn from "../components/social-links/LinkedIn.astro";
+---
+<style>
+  header {
+    text-align: center;
+  }
+  section {
+    margin: calc(64 / 16 * 1rem) 0;
+  }
+  nav ul li {
+    display: inline;
+  }
+  nav ul li:not(:last-child) {
+    margin-right: calc(32 / 16 * 1rem);
+  }
+</style>
+
+<MainLayout title="Erik Lopez">
+  <header>
+    <section>
+      <h1>Erik Lopez</h1>
+      <h2>Front End Developer</h2>
+    </section>
+    <nav>
+      <ul>
+        <li><Codepen widthHeight="64" /></li>
+        <li><Github widthHeight="64" /></li>
+        <li><LinkedIn widthHeight="64" /></li>
+      </ul>
+    </nav>
+  </header>
+</MainLayout>
