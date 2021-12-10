@@ -2,16 +2,15 @@
 import SocialLinkLayout from "../../layouts/SocialLinkLayout.astro";
 const { widthHeight } = Astro.props;
 ---
-<style>
-  svg rect {
-    display: none;
-  }
-  svg:hover path {
-    fill: #005EB6;
-  }
-  svg:hover rect {
-    display: block;
-  }
+<style lang="sass">
+  svg
+    rect
+      display: none
+    &:hover
+      path
+        fill: #005EB6
+      rect
+        display: block
 </style>
 
 <SocialLinkLayout link="https://www.linkedin.com/in/erikclopez/" ariaLabel="Erik's LinkedIn Profile">

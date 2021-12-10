@@ -1,13 +1,11 @@
 ---
 const { link, ariaLabel } = Astro.props;
 ---
-<style>
-  a {
-    text-decoration: none;
-  }
-  a:hover {
-    cursor: pointer;
-  }
+<style lang="sass">
+  a
+    text-decoration: none
+    &:hover
+      cursor: pointer
 </style>
 
 <a href={link} target="_blank" aria-label={ariaLabel}>

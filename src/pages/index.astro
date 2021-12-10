@@ -4,19 +4,15 @@ import Codepen from "../components/social-links/Codepen.astro";
 import Github from "../components/social-links/Github.astro";
 import LinkedIn from "../components/social-links/LinkedIn.astro";
 ---
-<style>
-  header {
-    text-align: center;
-  }
-  section {
-    margin: calc(64 / 16 * 1rem) 0;
-  }
-  nav ul li {
-    display: inline;
-  }
-  nav ul li:not(:last-child) {
-    margin-right: calc(32 / 16 * 1rem);
-  }
+<style lang="sass">
+  header
+    text-align: center
+    section
+      margin: calc(64 / 16 * 1rem) 0
+    nav ul li
+      display: inline
+      &:not(:last-child)
+        margin-right: calc(32 / 16 * 1rem)
 </style>
 
 <MainLayout title="Erik Lopez">

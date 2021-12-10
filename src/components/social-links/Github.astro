@@ -2,10 +2,11 @@
 import SocialLinkLayout from "../../layouts/SocialLinkLayout.astro";
 const { widthHeight } = Astro.props;
 ---
-<style>
-  svg:hover path {
-    fill: #000;
-  }
+<style lang="sass">
+  svg
+    &:hover
+      path
+        fill: #000
 </style>
 
 <SocialLinkLayout link="https://github.com/eclopez" ariaLabel="Erik's Github Profile">
