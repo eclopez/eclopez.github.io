@@ -1,0 +1,51 @@
+---
+interface Props {
+  title: string;
+  tagline: string;
+}
+const { title, tagline } = Astro.props;
+---
+
+<style lang="sass">
+  a.icon.brands.fa-linkedin:hover
+    color: #0077b5 !important
+</style>
+
+<header id="header">
+  <a href="/" class="logo">
+    <strong>{title}</strong>
+    {tagline}
+  </a>
+  <ul class="icons">
+    <li>
+      <a
+        href="https://codepen.io/Erik"
+        target="_blank"
+        class="icon brands fa-codepen"
+        aria-label="Erik Lopez's CodePen Profile"
+      >
+        <span class="label">CodePen</span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/eclopez"
+        target="_blank"
+        class="icon brands fa-github"
+        aria-label="Erik Lopez's GitHub Profile"
+      >
+        <span class="label">Facebook</span></a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/erikclopez/"
+        target="_blank"
+        class="icon brands fa-linkedin"
+        aria-label="Erik Lopez's LinkedIn Profile"
+      >
+        <span class="label">LinkedIn</span></a
+      >
+    </li>
+  </ul>
+</header>
