@@ -1,15 +1,37 @@
 ---
-const { title } = Astro.props;
-import "../styles/main.sass";
+interface Props {
+  title: string;
+  tagline: string;
+  description: string;
+}
+const { title, tagline, description } = Astro.props;
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+import "../assets/sass/main.scss";
 ---
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>{title}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    <meta name="description" content={description} />
+    <script async src="/js/jquery.min.js"></script>
+    <script defer src="/js/browser.min.js"></script>
+    <script defer src="/js/breakpoints.min.js"></script>
+    <script async src="/js/util.js"></script>
+    <script async src="/js/main.js"></script>
   </head>
-  <body>
-    <slot />
+  <body class="is-preload">
+    <div id="wrapper">
+      <div id="main">
+        <div class="inner">
+          <Header title={title} tagline={tagline} />
+          <slot />
+        </div>
+      </div>
+      <Sidebar title={title} />
+    </div>
   </body>
 </html>
