@@ -1,0 +1,15 @@
+{
+  "name": "eclopez.github.io",
+  "version": "3.0.0",
+  "description": "ErikLopez.net",
+  "scripts": {
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "author": "Erik Lopez",
+  "dependencies": {
+    "astro": "^2.1.2"
+  }
+}
